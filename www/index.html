@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/libs.min.css">
+  </head>
+  <body ng-app="myApp"><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <div ng-controller="myController" class="container">
+      <div class="calc row">
+        <div class="column small-12">
+          <p class="answer">{{ calc }}</p>
+        </div>
+        <div class="column small-3"><a ng-click="calculate(1)" class="buttons number one">1</a></div>
+        <div class="column small-3"><a ng-click="calculate(2)" class="buttons number two">2</a></div>
+        <div class="column small-3"><a ng-click="calculate(3)" class="buttons number three">3</a></div>
+        <div class="column small-3"><a class="buttons control divide">/</a></div>
+        <div class="column small-3"><a ng-click="calculate(4)" class="buttons number four">4</a></div>
+        <div class="column small-3"><a ng-click="calculate(5)" class="buttons number five">5</a></div>
+        <div class="column small-3"><a ng-click="calculate(6)" class="buttons number six">6</a></div>
+        <div class="column small-3"><a class="buttons control multiply">*</a></div>
+        <div class="column small-3"><a ng-click="calculate(7)" class="buttons number seven">7</a></div>
+        <div class="column small-3"><a ng-click="calculate(8)" class="buttons number eight">8</a></div>
+        <div class="column small-3"><a ng-click="calculate(9)" class="buttons number nine">9</a></div>
+        <div class="column small-3"><a class="buttons control subtract">-</a></div>
+        <div class="column small-3"><a ng-click="calculate(0)" class="buttons number zero">0</a></div>
+        <div class="column small-3"><a class="buttons control clear">C</a></div>
+        <div class="column small-3"><a class="buttons control equals">=</a></div>
+        <div class="column small-3"><a class="buttons control add">+</a></div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="scripts/plugins.js"></script>
+    <script src="scripts/libs.min.js"></script>
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>

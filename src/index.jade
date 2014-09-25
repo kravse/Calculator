@@ -1,0 +1,108 @@
+doctype
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='styles/main.min.css')
+    link(rel='stylesheet', href='styles/libs.min.css')
+    //-script(src='javascripts/vendor/modernizr-2.7.1.min.js')
+  body(ng-app = "myApp")
+    <!--[if lt IE 8]>
+    p.browsehappy
+      | You are using an <strong>outdated</strong> browser.
+      | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      | to improve your experience.
+    <![endif]-->
+    
+    .container(ng-controller="myController")
+    
+      .calc.row
+
+        .column.small-12
+         
+          p.answer {{ calc }}
+        
+        .column.small-3
+
+          a.buttons.number.one(ng-click="calculate(1)") 1
+        
+        .column.small-3
+
+          a.buttons.number.two(ng-click="calculate(2)") 2
+        
+        .column.small-3
+
+          a.buttons.number.three(ng-click="calculate(3)") 3
+
+        .column.small-3
+
+          a.buttons.control.divide /
+        
+        .column.small-3
+
+          a.buttons.number.four(ng-click="calculate(4)") 4
+        
+        .column.small-3
+
+          a.buttons.number.five(ng-click="calculate(5)") 5
+        
+        .column.small-3
+
+          a.buttons.number.six(ng-click="calculate(6)") 6
+
+        .column.small-3
+
+          a.buttons.control.multiply *
+        
+        .column.small-3
+
+          a.buttons.number.seven(ng-click="calculate(7)") 7
+        
+        .column.small-3
+
+          a.buttons.number.eight(ng-click="calculate(8)") 8
+        
+        .column.small-3
+
+          a.buttons.number.nine(ng-click="calculate(9)") 9
+
+        .column.small-3
+
+          a.buttons.control.subtract -
+
+        .column.small-3
+          
+          a.buttons.number.zero(ng-click="calculate(0)") 0
+        
+        .column.small-3
+          
+          a.buttons.control.clear C
+
+        .column.small-3
+          
+          a.buttons.control.equals =
+
+        .column.small-3
+
+          a.buttons.control.add +
+
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')
+    script(src='scripts/plugins.js')
+    script(src='scripts/libs.min.js')
+    script(src='scripts/main.min.js')
+
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //-
+      script
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
