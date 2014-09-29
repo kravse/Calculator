@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'digital-7_monomono';
+  src: url("../fonts/digital-7_mono.eot");
+  src: url("../fonts/digital-7_mono.eot?#iefix") format('embedded-opentype'), url("../fonts/digital-7_mono.woff2") format('woff2'), url("../fonts/digital-7_mono.woff") format('woff'), url("../fonts/digital-7_mono.ttf") format('truetype'), url("../fonts/digital-7_mono.svg#digital-7_monomono") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 article,
 aside,
 details,
@@ -392,6 +399,9 @@ textarea {
     page-break-after: avoid;
   }
 }
+body {
+  background: #f93;
+}
 .container {
   padding-top: 100px;
 }
@@ -400,17 +410,28 @@ textarea {
   width: 320px;
   margin: 0 auto;
 }
+.calc.row .column {
+  margin: 10px 0;
+}
+.calc.row .column.answer {
+  padding: 0;
+  margin: 0 4% 10px;
+  width: 92%;
+}
 .calc.row .buttons {
   border: 1px solid #eee;
   -webkit-box-shadow: 0px 1px 2px #555;
   box-shadow: 0px 1px 2px #555;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  margin: 5px;
   display: block;
   width: 100%;
   height: 100%;
   text-align: center;
+  font-family: digital-7_monomono;
+  font-size: 25px;
+  padding: 15px 20px 10px 18px;
+  background: #fff;
 }
 .calc.row .buttons:active {
   -webkit-box-shadow: 1px 2px 0px #555;
@@ -420,9 +441,12 @@ textarea {
   background-color: #ddd;
 }
 .calc.row .answer {
+  font-family: digital-7_monomono;
   margin: 3px;
   padding: 5px;
   background-color: #eee;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  color: #0c3;
+  font-size: 40px;
 }
