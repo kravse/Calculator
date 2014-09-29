@@ -27,67 +27,67 @@ html.no-js
         
         .column.small-3
 
-          a.buttons.number.one(ng-click="calculate(1)") 1
+          a.buttons.number.one(ng-click="compute(1)") 1
         
         .column.small-3
 
-          a.buttons.number.two(ng-click="calculate(2)") 2
+          a.buttons.number.two(ng-click="compute(2)") 2
         
         .column.small-3
 
-          a.buttons.number.three(ng-click="calculate(3)") 3
+          a.buttons.number.three(ng-click="compute(3)") 3
 
         .column.small-3
 
-          a.buttons.control.divide /
+          a.buttons.control.divide(ng-click="compute('/')") /
         
         .column.small-3
 
-          a.buttons.number.four(ng-click="calculate(4)") 4
+          a.buttons.number.four(ng-click="compute(4)") 4
         
         .column.small-3
 
-          a.buttons.number.five(ng-click="calculate(5)") 5
+          a.buttons.number.five(ng-click="compute(5)") 5
         
         .column.small-3
 
-          a.buttons.number.six(ng-click="calculate(6)") 6
+          a.buttons.number.six(ng-click="compute(6)") 6
 
         .column.small-3
 
-          a.buttons.control.multiply *
+          a.buttons.control.multiply(ng-click="compute('*')") *
         
         .column.small-3
 
-          a.buttons.number.seven(ng-click="calculate(7)") 7
+          a.buttons.number.seven(ng-click="compute(7)") 7
         
         .column.small-3
 
-          a.buttons.number.eight(ng-click="calculate(8)") 8
+          a.buttons.number.eight(ng-click="compute(8)") 8
         
         .column.small-3
 
-          a.buttons.number.nine(ng-click="calculate(9)") 9
+          a.buttons.number.nine(ng-click="compute(9)") 9
 
         .column.small-3
 
-          a.buttons.control.subtract -
+          a.buttons.control.subtract(ng-click="compute('-')") -
 
         .column.small-3
           
-          a.buttons.number.zero(ng-click="calculate(0)") 0
+          a.buttons.number.zero(ng-click="compute(0)") 0
         
         .column.small-3
           
-          a.buttons.control.clear C
+          a.buttons.control.clear(ng-click="compute('C')") C
 
         .column.small-3
           
-          a.buttons.control.equals =
+          a.buttons.control.equals(ng-click="compute('=')") =
 
         .column.small-3
 
-          a.buttons.control.add +
+          a.buttons.control.add(ng-click="compute('+')") +
 
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')

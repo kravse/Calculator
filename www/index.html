@@ -20,22 +20,22 @@
         <div class="column small-12">
           <p class="answer">{{ calc }}</p>
         </div>
-        <div class="column small-3"><a ng-click="calculate(1)" class="buttons number one">1</a></div>
-        <div class="column small-3"><a ng-click="calculate(2)" class="buttons number two">2</a></div>
-        <div class="column small-3"><a ng-click="calculate(3)" class="buttons number three">3</a></div>
-        <div class="column small-3"><a class="buttons control divide">/</a></div>
-        <div class="column small-3"><a ng-click="calculate(4)" class="buttons number four">4</a></div>
-        <div class="column small-3"><a ng-click="calculate(5)" class="buttons number five">5</a></div>
-        <div class="column small-3"><a ng-click="calculate(6)" class="buttons number six">6</a></div>
-        <div class="column small-3"><a class="buttons control multiply">*</a></div>
-        <div class="column small-3"><a ng-click="calculate(7)" class="buttons number seven">7</a></div>
-        <div class="column small-3"><a ng-click="calculate(8)" class="buttons number eight">8</a></div>
-        <div class="column small-3"><a ng-click="calculate(9)" class="buttons number nine">9</a></div>
-        <div class="column small-3"><a class="buttons control subtract">-</a></div>
-        <div class="column small-3"><a ng-click="calculate(0)" class="buttons number zero">0</a></div>
-        <div class="column small-3"><a class="buttons control clear">C</a></div>
-        <div class="column small-3"><a class="buttons control equals">=</a></div>
-        <div class="column small-3"><a class="buttons control add">+</a></div>
+        <div class="column small-3"><a ng-click="compute(1)" class="buttons number one">1</a></div>
+        <div class="column small-3"><a ng-click="compute(2)" class="buttons number two">2</a></div>
+        <div class="column small-3"><a ng-click="compute(3)" class="buttons number three">3</a></div>
+        <div class="column small-3"><a ng-click="compute('/')" class="buttons control divide">/</a></div>
+        <div class="column small-3"><a ng-click="compute(4)" class="buttons number four">4</a></div>
+        <div class="column small-3"><a ng-click="compute(5)" class="buttons number five">5</a></div>
+        <div class="column small-3"><a ng-click="compute(6)" class="buttons number six">6</a></div>
+        <div class="column small-3"><a ng-click="compute('*')" class="buttons control multiply">*</a></div>
+        <div class="column small-3"><a ng-click="compute(7)" class="buttons number seven">7</a></div>
+        <div class="column small-3"><a ng-click="compute(8)" class="buttons number eight">8</a></div>
+        <div class="column small-3"><a ng-click="compute(9)" class="buttons number nine">9</a></div>
+        <div class="column small-3"><a ng-click="compute('-')" class="buttons control subtract">-</a></div>
+        <div class="column small-3"><a ng-click="compute(0)" class="buttons number zero">0</a></div>
+        <div class="column small-3"><a ng-click="compute('C')" class="buttons control clear">C</a></div>
+        <div class="column small-3"><a ng-click="compute('=')" class="buttons control equals">=</a></div>
+        <div class="column small-3"><a ng-click="compute('+')" class="buttons control add">+</a></div>
       </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
