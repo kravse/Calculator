@@ -5,15 +5,19 @@ app.controller "myController",['$scope', ($scope) ->
   $scope.calc = "0"
   equation = []
   chain = ''
-  operators = ['/', '*', '+', '-', '=', 'C']
+  operators = ['/', '*', '+', '-', '=']
   currentValue = ''
   moveOn = false
 
   $scope.compute = (value)->
-    
+    if value is 'C'
+      $scope.reset(true)
+      return
+
     if moveOn
       $scope.calc = value
       moveOn = false
+
     if $scope.isOperator(value) 
       if equation.length < 1 && chain == ''
         $scope.calc = 0
@@ -28,8 +32,9 @@ app.controller "myController",['$scope', ($scope) ->
       chain = String(chain) + String(value)
       $scope.calc = chain
 
+
   $scope.isOperator = (value)-> 
-    operators = ['/', '*', '+', '-', '=', 'C']
+    operators = ['/', '*', '+', '-', '=']
     isOperator = false
     
     for i in [operators.length-1..0] by -1
@@ -39,13 +44,11 @@ app.controller "myController",['$scope', ($scope) ->
 
     return isOperator
 
-    # equation.push(value)
-    # lastVal = value
-    # $scope.calc = value
 
   $scope.calculate = (value)->
-    answer = ''
     
+    answer = ''
+
     if value.length < 3
       return
         
@@ -53,19 +56,30 @@ app.controller "myController",['$scope', ($scope) ->
       
       when '*' then answer = parseInt(value[0]) * parseInt(value[2])
       
-      when '/' then answer = parseInt(value[0]) * parseInt(value[2])
+      when '/' then answer = parseInt(value[0]) / parseInt(value[2])
       
-      when '+' then answer = parseInt(value[0]) * parseInt(value[2])
+      when '+' then answer = parseInt(value[0]) + parseInt(value[2])
 
-      when '-' then answer = parseInt(value[0]) * parseInt(value[2])
+      when '-' then answer = parseInt(value[0]) - parseInt(value[2])
 
       else 
         answer = 'err!'
     
-    # chain = answer
-    # temp = equation[4]
-    # equation = []
-    # equation.push(answer).push(temp)
+    $scope.reset(false)
+
+    if(value[3] is '=')
+      equation.push(answer)
+      chain = answer
+    else
+      equation.push(answer)
+      equation.push(value[3])
 
     return answer
+
+  $scope.reset = (zero)->
+    chain = ''
+    equation = []
+    
+    if(zero)
+      $scope.calc = 0
 ]
