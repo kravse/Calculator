@@ -45,13 +45,13 @@ app.controller "myController",['$scope', ($scope) ->
     
     switch String(operator)
           
-      when '*' then answer = parseInt(numbers[0]) * parseInt(numbers[1])
+      when '*' then answer = parseFloat(numbers[0]) * parseFloat(numbers[1])
       
-      when '/' then answer = parseInt(numbers[0]) / parseInt(numbers[1])
+      when '/' then answer = parseFloat(numbers[0]) / parseFloat(numbers[1])
       
-      when '+' then answer = parseInt(numbers[0]) + parseInt(numbers[1])
+      when '+' then answer = parseFloat(numbers[0]) + parseFloat(numbers[1])
 
-      when '-' then answer = parseInt(numbers[0]) - parseInt(numbers[1])
+      when '-' then answer = parseFloat(numbers[0]) - parseFloat(numbers[1])
 
       else 
         answer = 'err'
