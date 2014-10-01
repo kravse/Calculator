@@ -32,14 +32,24 @@ app.controller "myController",['$scope', ($scope) ->
           $scope.calc = value
         when 1 
           if operator 
-            numbers.push(value)
-            $scope.calc = value
+            if(operator == '=')
+              $scope.reset()
+              numbers.push(value)
+              $scope.calc = value
+            else
+              numbers.push(value)
+              $scope.calc = value
           else 
             numbers[0] = String(numbers[0]) + String(value)
             $scope.calc = numbers[0]
         when 2 
           numbers[1] = String(numbers[1]) + String(value)
           $scope.calc = numbers[1]
+    console.log('*----------------------*')
+    console.log('numbers[0] ', numbers[0])
+    console.log('numbers[1] ', numbers[1])
+    console.log('numbers.length ', numbers.length)
+    console.log('operator ', operator)
 
   $scope.calculate = (op)->
     
