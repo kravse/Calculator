@@ -4,15 +4,31 @@
 //- --------------------------------------------------------
 
 body
-  background: #FF9933
+  background-image: url('../images/bg.jpg') 
+  background-repeat: no-repeat 
+  background-position: center center
+  background-size: cover
 
 .container
   padding-top: 100px
 
+  +media('mobile')
+    padding-top: 50px
+
 .calc.row
   display: block
-  width: 320px
+  width: 350px
   margin: 0 auto
+  background: #FF9933
+  padding: 30px 20px
+  border-radius: 5px
+  box-shadow: 0px 3px 10px #111;
+  border: 1px solid #333
+
+  +media('mobile')
+    width: 95%
+    padding: 25px 0px
+
 
   .column
     margin: 10px 0

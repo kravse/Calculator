@@ -400,15 +400,38 @@ textarea {
   }
 }
 body {
-  background: #f93;
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 .container {
   padding-top: 100px;
 }
+@media (max-width: 640px) {
+  .container {
+    padding-top: 50px;
+  }
+}
 .calc.row {
   display: block;
-  width: 320px;
+  width: 350px;
   margin: 0 auto;
+  background: #f93;
+  padding: 30px 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 10px #111;
+  box-shadow: 0px 3px 10px #111;
+  border: 1px solid #333;
+}
+@media (max-width: 640px) {
+  .calc.row {
+    width: 95%;
+    padding: 25px 0px;
+  }
 }
 .calc.row .column {
   margin: 10px 0;
