@@ -8,6 +8,8 @@ html.no-js
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='styles/main.min.css')
     link(rel='stylesheet', href='styles/libs.min.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:600', rel='stylesheet' type='text/css')
+
     //-script(src='javascripts/vendor/modernizr-2.7.1.min.js')
   body(ng-app = "myApp")
     <!--[if lt IE 8]>
@@ -88,6 +90,8 @@ html.no-js
         .column.small-3
 
           a.buttons.control.add(ng-click="compute('+')") +
+
+        a.link(href="http://jaredkrau.se", target="_blank") jaredkrau.se
 
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')

@@ -15,6 +15,8 @@ body
   +media('mobile')
     padding-top: 50px
 
+
+
 .calc.row
   display: block
   width: 350px
@@ -24,11 +26,24 @@ body
   border-radius: 5px
   box-shadow: 0px 3px 10px #111;
   border: 1px solid #333
+  position: relative
 
   +media('mobile')
     width: 95%
     padding: 25px 0px
-
+  
+  .link
+    color: #000
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px
+    font-weight: 600
+    text-decoration: none
+    position: absolute
+    bottom: 5px
+    right: 5px
+    
+    &:hover
+      color: #eee
 
   .column
     margin: 10px 0
