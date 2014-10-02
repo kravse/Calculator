@@ -1,5 +1,9 @@
 Just messing around with AngularJS to try and make a functional web calculator. 
 
+Demo: http://jaredkrau.se/calculator
+
+Installation: 
+
 1) In the project root, run 'npm install'
 
 2) In the project root, run 'bower install'
