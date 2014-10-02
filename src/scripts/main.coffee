@@ -5,10 +5,7 @@ app.controller "myController",['$scope', ($scope) ->
   $scope.calc = "0"
   operator = false
   numbers = []
-  chain = ''
   operators = ['/', '*', '+', '-', '=']
-  currentValue = ''
-  moveOn = false
 
   $scope.compute = (value)->
 
@@ -45,26 +42,33 @@ app.controller "myController",['$scope', ($scope) ->
         when 2 
           numbers[1] = String(numbers[1]) + String(value)
           $scope.calc = numbers[1]
-    console.log('*----------------------*')
-    console.log('numbers[0] ', numbers[0])
-    console.log('numbers[1] ', numbers[1])
-    console.log('numbers.length ', numbers.length)
-    console.log('operator ', operator)
+    
+    # /*-----------------*/
+    # values
+    # /*-----------------*/
+
+    # console.log('*----------------------*')
+    # console.log('numbers[0] ', numbers[0])
+    # console.log('numbers[1] ', numbers[1])
+    # console.log('numbers.length ', numbers.length)
+    # console.log('operator ', operator)
 
   $scope.calculate = (op)->
     
-    switch String(operator)
+    eval("answer = parseFloat(numbers[0])"+operator+"parseFloat(numbers[1])")
+    
+    # switch String(operator)
           
-      when '*' then answer = parseFloat(numbers[0]) * parseFloat(numbers[1])
+    #   when '*' then answer = parseFloat(numbers[0]) * parseFloat(numbers[1])
       
-      when '/' then answer = parseFloat(numbers[0]) / parseFloat(numbers[1])
+    #   when '/' then answer = parseFloat(numbers[0]) / parseFloat(numbers[1])
       
-      when '+' then answer = parseFloat(numbers[0]) + parseFloat(numbers[1])
+    #   when '+' then answer = parseFloat(numbers[0]) + parseFloat(numbers[1])
 
-      when '-' then answer = parseFloat(numbers[0]) - parseFloat(numbers[1])
+    #   when '-' then answer = parseFloat(numbers[0]) - parseFloat(numbers[1])
 
-      else 
-        answer = 'err'
+    #   else 
+    #     answer = 'err'
 
     $scope.calc = answer
 
@@ -83,7 +87,6 @@ app.controller "myController",['$scope', ($scope) ->
       $scope.calc = 0
 
   $scope.isOperator = (value)-> 
-    operators = ['/', '*', '+', '-', '=']
     isOperator = false
     
     for i in [operators.length-1..0] by -1
